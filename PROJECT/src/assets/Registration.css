@@ -1,0 +1,127 @@
+body{
+  background-image: url("../assets/bg.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+  overflow-x: hidden;
+  
+  color: white;
+}
+.registration-form {
+    margin-left: 25%;
+    margin-top: 5%;
+    width: 735px;
+    height: 550px;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    background-color: #142633d3;
+    border-radius: 5px;
+  }
+
+  h1{
+    margin-top: 7%;
+    margin-left: -8%;
+    margin-bottom: 7%;
+  }
+  .Maindiv{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .form-group {
+    margin-left: 3%;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .div1{
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input{
+    width: 300px;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button{
+    background-color: #061f39;
+    color: white;
+    font-size: medium;
+    margin-left: -5%;
+    margin-top: 10%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  button[type='submit']:hover {
+    background-color: #0056b3;
+  }
+  
+  @media (max-width: 800px) {
+    body {
+        background-image: url("../assets/pexels-johannes-plenio-1103970.jpg");
+        background-size: contain;
+    }
+
+    .registration-form {
+        margin-top: 20px;
+        width: 90%;
+        height: 60%;
+        padding-left: 30px;
+        padding-top: 10px;
+        padding-bottom: 30px;
+        background-color: #142633d3;
+        border-radius: 5px;
+    }
+
+    h1 {
+        margin-left: -150px;
+    }
+
+    .Maindiv {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .form-group {
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    label {
+        margin-left: 10px;
+    }
+
+    .div1 {
+        margin-right: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    input {
+        width: 90%;
+        margin-top: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    button {
+        background-color: #061f39;
+        color: white;
+        margin-left: 70px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    button[type='submit']:hover {
+        background-color: #0056b3;
+    }
+}
