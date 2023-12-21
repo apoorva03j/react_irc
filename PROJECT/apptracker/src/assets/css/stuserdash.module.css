@@ -1,0 +1,54 @@
+.maindiv {
+    margin-top:30%;
+    gap: 10px;
+    margin-bottom: 10%;
+    padding-left: 30px;
+    justify-content: center;
+    
+}
+
+.secdiv1{
+    transform: translate(40%, 3%);
+}
+
+
+.title{
+    margin-left: 3%;
+    font-size: x-large;
+}
+.feeddiv{
+    display: flex;
+    justify-content: end;
+    width: 900px;
+}
+
+.secdiv {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    width: 800px;
+}
+
+.feedtitles{
+    display: flex;
+    gap:calc(30%);
+}
+@media screen and (max-width: 1180px) {
+    .maindiv {
+        overflow-x: hidden;
+        margin-left: 4%;
+        margin-top: 95%;
+        margin-bottom: 10%;
+    }
+
+    .feeddiv {
+        width: 700px;
+        padding-left: 0px;
+    }
+
+    .secdiv{
+        margin-left: -30px;
+        width: 800px;
+    }
+}

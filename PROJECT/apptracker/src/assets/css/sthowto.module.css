@@ -1,0 +1,38 @@
+.maindiv {
+    display: flex;
+    flex-direction: row;
+    gap:  20px;
+    justify-content: center;
+    align-items: center;
+    max-width: 650px;
+    width: 100%;
+    transform: translate(30%);
+}
+
+.secdiv2 {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-left: -400px;
+}
+
+.secdiv1 {
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.img{
+    width: 310px;
+    margin-right: -100%;
+}
+
+@media (max-width: 768px) {
+    .secdiv {
+        flex-direction: column;
+    }
+}

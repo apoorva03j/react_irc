@@ -1,0 +1,11 @@
+
+.carddiv{
+    max-width: 220px;
+    width: 100%;
+    padding: 0.7rem;
+    max-height: 70px;
+    font-size: large;
+    border-radius: 7px;
+    background-color: #112d35e3;
+    color: white;
+}

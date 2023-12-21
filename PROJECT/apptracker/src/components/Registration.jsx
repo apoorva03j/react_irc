@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import '../assets/Registration.css';
+import {useHistory} from 'react-router-dom';
+import streg from '../assets/css/streg.module.css';
+
 
 const Registration = () => {
   const [firstName, setFirstName] = useState('');
@@ -9,43 +11,45 @@ const Registration = () => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
 
-  const handleSubmit = () => {
+
+  const handleSubmit = (event) => {
     if(password!==confirmPassword)
     {
-        window.alert("Passwords do not match!")
+      event.preventDefault();
+      window.alert("Passwords do not match!")
     }
     else{
-        window.alert("Thank you for registering!");
-        window.location.reload();
+      event.preventDefault();
+        window.alert("Thank you for registering! Go to the Login Page");
     }
   };
 
   return (
-    <div className="registration-form">
-      <h1>Registration Form</h1>
+    <div className={streg.registrationForm}>
+      <h1 className={streg.h1t}>Registration Form</h1>
       <form onSubmit={handleSubmit}>
     
-    <div className='Maindiv'>
-        <div className="div1">
-        <div className="form-group">
+    <div className={streg.Maindiv}>
+        <div className={streg.div1}>
+        <div className={streg.formGroup}>
           <label htmlFor="firstName">First Name</label>
-          <input
+          <input className={streg.inputbox}
             type="text"
             id="firstName"
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)} required />
         </div>
-        <div className="form-group">
+        <div className={streg.formGroup}>
           <label htmlFor="lastName">Last Name</label>
-          <input
+          <input className={streg.inputbox}
             type="text"
             id="lastName"
             value={lastName}
             onChange={(e) => setLastName(e.target.value)} required/>
         </div>
-        <div className="form-group">
+        <div className={streg.formGroup}>
           <label htmlFor="dateOfBirth">Date of Birth</label>
-          <input
+          <input className={streg.inputbox}
             type="date"
             id="dateOfBirth"
             value={dateOfBirth}
@@ -53,26 +57,26 @@ const Registration = () => {
         </div>
         </div>
 
-        <div className='div1'>
-        <div className="form-group">
+        <div className={streg.div1}>
+        <div className={streg.formGroup}>
           <label htmlFor="username">Username</label>
-          <input
+          <input className={streg.inputbox}
             type="text"
             id="username"
             value={username}
             onChange={(e) => setUsername(e.target.value)} required/>
         </div>
-        <div className="form-group">
+        <div className={streg.formGroup}>
           <label htmlFor="password">Password</label>
-          <input
+          <input className={streg.inputbox}
             type="password"
             id="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)} required/>
         </div>
-        <div className="form-group">
+        <div className={streg.formGroup}>
           <label htmlFor="confirmPassword">Confirm Password</label>
-          <input
+          <input className={streg.inputbox}
             type="password"
             id="confirmPassword"
             value={confirmPassword}
@@ -80,8 +84,9 @@ const Registration = () => {
         </div>
         </div>
         </div>
-        <button type="submit">SUBMIT</button>
+        <button className={streg.btn} type="submit">SUBMIT</button>
       </form>
+
     </div>
   );
 };

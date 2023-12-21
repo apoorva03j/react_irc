@@ -1,5 +1,5 @@
 body{
-  background-image: url("../assets/bg.jpg");
+  background-color: white;
   background-repeat: no-repeat;
   background-size:cover;
   overflow-x: hidden;
@@ -65,7 +65,7 @@ body{
   
   @media (max-width: 800px) {
     body {
-        background-image: url("../assets/pexels-johannes-plenio-1103970.jpg");
+        background-color: white;
         background-size: contain;
     }
 

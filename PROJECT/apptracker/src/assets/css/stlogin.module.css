@@ -1,6 +1,6 @@
 body {
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-image: url(pexels-johannes-plenio-1103970.jpg);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: white;
   background-size: cover;
   overflow-x: hidden;
   display: flex;
@@ -17,7 +17,7 @@ body {
   flex-direction: row;
 }
 
-.login-img{
+.loginImg{
   transform: translate(-10%, -4.18%);
   height: 64.67vh;
 }
@@ -56,7 +56,7 @@ input {
   margin-left: 14px;
 }
 
-button {
+.btn {
   background-color: #061f39;
   margin-bottom: 7%;
   margin-left: 16%;
@@ -72,13 +72,13 @@ button:hover {
   background-color: #0056b3;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1180px) {
   .logindiv {
       width: 100%;
-      height: 80%;
+      height: 100%;
   }
 
-  .login-img {
+  .loginImg {
       display: none;
   }
 
@@ -86,6 +86,10 @@ button:hover {
       margin-top: 5%;
       margin-left: 4%;
       margin-bottom: 15%;
+  }
+
+  label{
+    margin-left: 20px;
   }
 
   input {

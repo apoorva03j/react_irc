@@ -1,0 +1,128 @@
+.registrationForm {
+    margin-top: 1%;
+    width: 735px;
+    height: 500px;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    background-color: #142633d3;
+    border-radius: 5px;
+    color:white;
+    overflow-x: hidden;
+    overflow: hidden;
+  }
+
+  .h1t{
+    margin-top: 7%;
+    margin-left: -4%;
+    margin-bottom: 7%;
+  }
+  .Maindiv{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .formGroup {
+    margin-left: 3%;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .div1{
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .inputbox{
+    width: 600px;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: -5px;
+  }
+
+  .links{
+    text-decoration: none;
+    color: white;
+  }
+  
+  .btn{
+    background-color: #061f39;
+    color: white;
+    width: 100px;
+    font-size: medium;
+    margin-left: 40%;
+    margin-top: -2%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .btn[type='submit']:hover {
+    background-color: #0056b3;
+  }
+  
+  @media (max-width: 1180px) {
+    body {
+        background-color: white;
+    }
+
+    .registrationForm {
+       transform: translate(0, -10%);
+        margin-top: 20px;
+        width: 90%;
+        height: 60%;
+        padding-left: 30px;
+        padding-top: 10px;
+        padding-bottom: 30px;
+        background-color: #142633d3;
+        border-radius: 5px;
+        overflow-x: hidden;
+        overflow-wrap: break-word;
+    }
+
+    .h1t {
+        margin-left: -7px;
+    }
+
+    .Maindiv {
+        display: flex;
+        flex-direction: row;
+        margin-left: -5px;
+    }
+
+    .formGroup {
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    .div1 {
+        margin-right: 50px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inputbox {
+        width: 300px;
+        margin-top: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .btn {
+        background-color: #061f39;
+        color: white;
+        margin-left: 110px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        width: 30%;
+    }
+
+    .btn[type='submit']:hover {
+        background-color: #0056b3;
+    }
+}
