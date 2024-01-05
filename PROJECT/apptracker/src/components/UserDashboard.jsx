@@ -15,20 +15,26 @@ import stark from '../assets/stark.png';
 import krusty from '../assets/krusty.png';
 import React from 'react';
 import Banner3 from '../components/Banner3';
+import { Link } from 'react-router-dom';
 
 
 function UserDashboard(){
     return(
-        <div className={stuserdash.maindiv}>  
+        <div className={stuserdash.maindiv}>
         <Banner3/>
+        <h1 className={stuserdash.text1}>User Dashboard</h1>
         <div className={stuserdash.secdiv1}>
         <h2 className={stuserdash.title} style={{color:'black', fontSize: 'xx-large'}}>Categories</h2>
-        <div className={stuserdash.secdiv}>
-        <Card1 title={"Design"} image={pencil} desc={"25 openings"}/>
-        <Card1 title={"Marketing"} image={marketing} desc={"12 openings"}/>
-        <Card1 title={"Healthcare"} image={health} desc={"09 openings"}/>
-        <Card1 title={"Technology"} image={it} desc={"37 openings"}/>
-        </div>
+            <div className={stuserdash.secdiv}>
+            <Card1 title={"Design"} image={pencil} desc={"25 openings"}/>
+            <Card1 title={"Marketing"} image={marketing} desc={"12 openings"}/>
+            <Card1 title={"Healthcare"} image={health} desc={"09 openings"}/>
+            <Card1 title={"Technology"} image={it} desc={"37 openings"}/>
+            </div>
+            <Link to="/home"><button className={stuserdash.btn}>Search More Openings</button></Link>
+            <br/><br/>
+            <br/><br/>
+            <br/><br/>
         <h2 className={stuserdash.title}> Your Feed </h2>
         <div className={stuserdash.feedtitles}> 
             <h3 className={stuserdash.title}>Latest Openings</h3>

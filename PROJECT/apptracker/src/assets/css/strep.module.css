@@ -1,5 +1,5 @@
 .registrationForm {
-    margin-top: 1%;
+    margin-top: 7%;
     width: 735px;
     height: 500px;
     padding-left: 30px;
@@ -10,11 +10,12 @@
     color:white;
     overflow-x: hidden;
     overflow: hidden;
+    margin-left: 400px;
   }
 
   .h1t{
     margin-top: 7%;
-    margin-left: -4%;
+    margin-left: 2%;
     margin-bottom: 7%;
   }
   .Maindiv{
@@ -54,7 +55,7 @@
     width: 100px;
     font-size: medium;
     margin-left: 40%;
-    margin-top: -2%;
+    margin-top: 5%;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;

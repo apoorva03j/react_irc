@@ -1,6 +1,6 @@
 .maindiv{
     text-align: center;
-    margin-top: 160%;
+    margin-top: -4%;
     justify-content: center;
     overflow-y: hidden;
     overflow-x: hidden;
@@ -24,23 +24,23 @@
 }
 
 .h1tg{
-    transform: translate(-2%, -195%);
+    transform: translate(-2%, 0);
     color: white;
 }
 
-.seconddiv{
-    transform: translate(0, -350%);
+.secdiv{
+    margin-top: 25%;
 }
 
 .text{
-    transform: translate(0, -250%);
+    transform: translate(0, -750%);
     margin-left: -10px;
     justify-content: center;
     font-size: xx-large;
     color:#112d35;
 }
 .text1{
-    transform: translate(0, -1300%);
+    transform: translate(0, -400%);
     margin-left: -10px;
     justify-content: center;
     font-size: xx-large;
@@ -50,25 +50,3 @@
     transform: translate(10%, -150%);
 }
 
-
-
-@media (max-width: 1180px) {
-    .maindiv{
-        margin-top: 150%;
-    }
-
-    .searchb{
-        transform: translate(-50%, -90%);
-    }
-    .h1tg{
-        transform: translate(0, 10%);
-    }
-
-    .text{
-        transform: translate(1%, 10%);
-    }
-    .cardsdiv {
-        max-width: 500px;
-        transform: translate(125%, -30%);
-    }
-}

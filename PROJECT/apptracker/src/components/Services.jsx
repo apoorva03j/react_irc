@@ -6,7 +6,7 @@ function Services()
 {
     return (
         <div className={stserv.maindiv}>
-            <h1>Services</h1>
+            <h1 className={stserv.h1t}>Services</h1>
             <div className={stserv.secdiv}>
                 <Card2 title={"Job Posting Service"}/>
                 <Card2 title={"Resume Parsing"}/>
@@ -18,6 +18,7 @@ function Services()
                 <Card2 title={"Reports and Analytics"}/>
             </div>
             <div className={stserv.testdiv}>
+            <h1 className={stserv.h1t}>Testimonials</h1>
             <Testimonials/>
             </div>
         </div>

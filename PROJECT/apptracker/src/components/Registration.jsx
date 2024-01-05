@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {useHistory} from 'react-router-dom';
+import axios from 'axios';
 import streg from '../assets/css/streg.module.css';
 
 
@@ -10,19 +10,33 @@ const Registration = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const handleSubmit = async (event) => {
+    event.preventDefault();
 
+    if (password !== confirmPassword) {
+      window.alert("Passwords do not match!");
+      return;
+    }
 
-  const handleSubmit = (event) => {
-    if(password!==confirmPassword)
-    {
-      event.preventDefault();
-      window.alert("Passwords do not match!")
+     try {
+      const response = await axios.post(`http://localhost:3001/users`, {
+        username: username,
+        password: password,
+      });
+
+      if (response.data) {
+        console.log('Data inserted successfully');
+        window.alert("Thank you for registering! You will be redirected to Login Page!");
+        window.location.href="/";
+      } else {
+        console.log('Error in data insertion');
+        window.alert("An error occurred while saving your data!");
+      }
+    } catch (error) {
+      console.error("Error inserting user:", error);
+      window.alert("An error occurred while saving your data!");
     }
-    else{
-      event.preventDefault();
-        window.alert("Thank you for registering! Go to the Login Page");
-    }
-  };
+ };
 
   return (
     <div className={streg.registrationForm}>

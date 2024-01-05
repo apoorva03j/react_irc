@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
-import {Link} from 'react-router-dom';
 import strep from '../assets/css/strep.module.css';
 
 const Registration = () => {
   const [Name, setName] = useState('');
   const [Comment, setComment] = useState('');
 
+  const handleSubmit = () => {
+    window.alert("We will get back to you shortly");
+  };
+
   return (
     <div className={strep.registrationForm}>
       <h1 className={strep.h1t}>Report Issue</h1>
-      <form>
+      <form onSubmit={handleSubmit}>
     
     <div className={strep.Maindiv}>
         <div className={strep.div1}>
@@ -35,8 +38,7 @@ const Registration = () => {
         </div>
         </div>
         </div>
-        <button className={strep.btn} type="submit">
-          <Link className={strep.links} to="/">SUBMIT</Link></button>
+        <button className={strep.btn} type="submit">SUBMIT</button>
       </form>
     </div>
   );

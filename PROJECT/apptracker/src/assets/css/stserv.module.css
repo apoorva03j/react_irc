@@ -1,5 +1,5 @@
 .maindiv{
-    margin-top: 30%;
+    margin-top: 7%;
     justify-content: center;
     margin-bottom: 20%;
     margin-left: 1%;
@@ -9,6 +9,11 @@
     flex-wrap: wrap;
     gap: 20px;
     margin-left: 25%;
+}
+
+.h1t{
+    margin-left:670px;
+    margin-bottom: 50px;
 }
 
 .testdiv{

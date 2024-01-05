@@ -4,6 +4,7 @@ import stheader from '../assets/css/stheader.module.css';
 
 function Header()
 {
+  
     return(
         <div className={stheader.headerdiv}>
             <div className={stheader.btns}>
@@ -13,7 +14,7 @@ function Header()
                 <p className={stheader.links}>Career Junction</p>
             </div>
             <div className={stheader.btns}>
-                <Link to="/login" className={stheader.links}>
+                <Link to="/" className={stheader.links}>
                 <button className={stheader.indivbtn}>Login</button>
                 </Link>
                 <Link to="/reg" className={stheader.links}>

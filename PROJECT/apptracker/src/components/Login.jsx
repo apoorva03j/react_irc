@@ -1,38 +1,56 @@
 import React from "react";
-import { useState } from "react";
-import loginimg from "../assets/loginimg.png";
+import { useState} from "react";
 import {Link} from "react-router-dom";
+import axios from 'axios';
 import stlogin from '../assets/css/stlogin.module.css';
 function Login()
 {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
+    const [userName, setUsername] = useState("");
+    const [passWord, setPassword] = useState("");
 
-    const handleSubmit = () =>{
-        window.alert("Login Successful!");
-    }
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+       
+        try {
+           const response = await axios.get(
+             "http://localhost:3001/users?username=" + userName
+           );
+       
+           if (response.data.length === 0) {
+             alert("No user found with this username.");
+             return;
+           }
+       
+           const user = response.data[0];
+       
+           if (user.password === passWord) {
+             alert("Login successful!");
+             window.location.href='/userdash';
+           } else {
+             alert("Incorrect password. Please try again.");
+           }
+        } catch (error) {
+           console.error("Error:", error);
+        }
+       };
+
     return (
         <div className={stlogin.logindiv} >
-            <img src={loginimg} alt="login" className={stlogin.loginImg}></img>
             <div className={stlogin.innerdiv}>
-            <h1>LOGIN</h1>
-            <form onSubmit={handleSubmit}>
-                <label for="username">
+            <form onSubmit={handleSubmit} className={stlogin.formdiv}>
+                <h1 className={stlogin.h1tag}>Login</h1>
+                <p className={stlogin.ptag}>Don't have an account ? <Link to='/reg'>Create one now</Link></p>
+                <label htmlFor="username" className={stlogin.labeltag}>
                     Username : 
-                    <input type="text" placeholder="Username" name="username" value={username} onChange={(e) => setUsername(e.target.value)} required/>
+                    <input type="text" placeholder="Username" name="username" value={userName} className={stlogin.inputtag} onChange={(e) => setUsername(e.target.value)} required/>
                 </label>
                 <br />
-                <label for="password">
+                <label htmlFor="password" className={stlogin.labeltag}>
                     Password :   
-                    <input type="password" placeholder="Password" name="password" className={stlogin.inp2} value={password} onChange={(e) => setPassword(e.target.value)}required />
+                    <input type="password" placeholder="Password" name="password" className={stlogin.inputtag} value={passWord} onChange={(e) => setPassword(e.target.value)}required />
                 </label>
                 <br />
-                <Link to="/userdash">
                 <button className={stlogin.btn} type="submit">LOGIN</button>
-                </Link>
-                <Link to="/reg">
-                    <button className={stlogin.btn} type="button">SIGN UP</button>
-                </Link>
             </form>
             </div>
         </div>

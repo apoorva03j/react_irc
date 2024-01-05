@@ -1,25 +1,47 @@
 .maindiv {
-    margin-top:30%;
     gap: 10px;
     margin-bottom: 10%;
-    padding-left: 30px;
-    justify-content: center;
-    
+    overflow-x: hidden;
+    overflow-y: hidden;
+    justify-content: center;  
+    align-items: center; 
 }
 
 .secdiv1{
-    transform: translate(40%, 3%);
+    transform: translate(25%, 3%);
 }
 
+.btn {
+    background-color: #061f39;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px; 
+    width: 400px;
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 20px;
+    margin-left: 200px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
 
+.text1{
+    margin-left: 650px;
+
+}
 .title{
-    margin-left: 3%;
+    margin-left: 0%;
     font-size: x-large;
 }
 .feeddiv{
     display: flex;
     justify-content: end;
     width: 900px;
+    height: 1000px;
+    margin-left: -100px;
 }
 
 .secdiv {
@@ -30,25 +52,8 @@
     width: 800px;
 }
 
+
 .feedtitles{
     display: flex;
     gap:calc(30%);
-}
-@media screen and (max-width: 1180px) {
-    .maindiv {
-        overflow-x: hidden;
-        margin-left: 4%;
-        margin-top: 95%;
-        margin-bottom: 10%;
-    }
-
-    .feeddiv {
-        width: 700px;
-        padding-left: 0px;
-    }
-
-    .secdiv{
-        margin-left: -30px;
-        width: 800px;
-    }
 }

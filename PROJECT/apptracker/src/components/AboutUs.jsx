@@ -5,7 +5,7 @@ const AboutUs = () => {
         <h1 style={styles.heading}>About Us</h1>
         <p style={styles.paragraph}>
           Welcome to our About Us page. We are a team of passionate individuals dedicated to providing
-          high-quality services and products. 
+          high-quality services and products in the field of job application portals 
         </p>
         <p style={styles.paragraph}>
           Our mission is to deliver exceptional value to our customers and contribute positively to the
@@ -18,7 +18,9 @@ const AboutUs = () => {
   const styles = {
     container: {
       maxWidth: '600px',
-      margin: 'auto',
+      marginTop: '10%',
+      marginLeft: '30%',
+      justifyContent : 'center',
       padding: '20px',
       textAlign: 'center',
     },

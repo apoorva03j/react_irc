@@ -1,6 +1,5 @@
 import Banner1 from "./Banner1";
 import Card1 from "./Card1";
-import HowTo from '../components/HowTo';
 import google from '../assets/google.png';
 import fb from '../assets/fb.png';
 import dm from '../assets/dm.png';
@@ -41,9 +40,6 @@ function Home()
             <Card2 title={"PHP Developer > "}/>
             </div>
             </div>
-            </div>
-            <div className={sthome.lastdiv}>
-            <HowTo/>
             </div>
         </div>
     );
